@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopiT | Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-for-loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:
+            wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+</style>
+
+<body>
+    <!-- Pre-Loader -->
+    <!-- <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-inner">
+                <img src="Images/trolly.gif" alt="Please Wait (-_-)">
+            </span>
+        </div>
+        <p>Loading<img src="Images/3-dot.gif" alt="Loading...">
+        </p>
+    </div> -->
+
+    <!-- jQuery For Pre-Loader-->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(window).load(function () {
+            $(".preloader").delay(5000).fadeOut("slow");
+            $("#overlayer").delay(5000).fadeOut("slow");
+        })
+    </script> -->
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <!-- Chat Function -->
+    <div class="elfsight-app-06e3c89c-3ffc-4334-8b5c-95a5fb0c7c2c"></div>
+
+    <!-- navbar starts -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="Index.html"><img src="Images/logo (2).png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="Images/cart.png" width="30px" height="30px">
+            </a>
+            <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- cart items details -->
+    <div class="small-container card-items">
+        <table>
+            <tr>
+                <th class="cart-item">Products</th>
+                <th class="cart-quantity">Quantity</th>
+                <th class="cart-price">Subtotal</th>
+            </tr>
+
+            <div class="cart-items" id="grid">
+            </div>
+            <!-- <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="Images/product-1.jpg">
+                        <div>
+                            <p>Red Printed T-shirt</p>
+                            <small>price: $50.00</small>
+                            <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="Images/buy-2.jpg">
+                        <div>
+                            <p>Red Printed T-shirt</p>
+                            <small>price: $60.00</small>
+                            <br>
+                            <a href="" class="dustbin"><i class="fa-solid fa-trash"
+                                    style="font-size:25px;color:red;float: right;margin-top: 10px;"></i></a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$60.00</td>
+
+            </tr> -->
+
+        </table>
+
+        <div class="total-price">
+            <table>
+                <!-- <tr>
+                    <td>Subtotal</td>
+                    <td>$200.00</td>
+                </tr>
+                <tr>
+                    <td>Tax</td>
+                    <td>$35.00</td>
+                </tr> -->
+                <tr>
+                    <td>Total</td>
+                    <td id="total_cart">PKR 0.0</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="Images/play-store.png">
+                        <img src="Images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="Images/logo (2).png">
+                    <p>Our Purpose Is To Make The Pleasure And Benefits Of Sports
+                        Accessible To The Money</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - ShopiT.com</p>
+        </div>
+    </div>
+
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems")
+
+        menuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script src="product.js"></script>
+    <script>
+        function FillCartPage() {
+            var cart = JSON.parse(localStorage.getItem("cart"));
+
+            var grid = '';
+            document.getElementById("grid").innerHTML = grid;
+            for (var i in cart) {
+                grid +=
+                    // '<div class="card rounded-3 mb-4">' +
+                    // '<div class="card-body p-4">' +
+                    // ' <div class="row d-flex justify-content-between align-items-center">' +
+                    // '<div class="col-md-2 col-lg-2 col-xl-2">' +
+                    // '<img src="' + cart[i].image + '" class="img-fluid rounded-3" alt="Cotton T-shirt"> </div>' +
+                    // '<div class="col-md-3 col-lg-3 col-xl-3">' +
+                    // ' <p class="lead fw-normal mb-2">' + cart[i].product_name + '</p>' +
+                    // '</div>' +
+                    // '<div class="col-md-3 col-lg-3 col-xl-2 d-flex">' +
+                    // '<p>' + cart[i].qty + '</p>' +
+                    // '</div>' +
+                    // '<div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">' +
+                    // ' <h5 class="mb-0">PKR ' + cart[i].product_cart_price + '</h5>' +
+                    // '</div>' +
+                    // '<div class="col-md-1 col-lg-1 col-xl-1 text-end">' +
+                    // '<a href="#!" class="text-danger"><i class="fas fa-trash fa-lg" onclick="RemoveFromCart(' + i + ')"></i></a>' +
+                    // '</div>' +
+                    // '</div>' +
+                    // ' </div >' +
+                    // '</div > ';
+                    '<tr>' +
+                    '<td>' +
+                    '<div class="cart-info">' +
+                    '<img src="' + cart[i].image + '">' +
+                    ' <div>' +
+                    '<p>' + cart[i].product_name + '</p>' +
+                    '<small> Price: PKR ' + cart[i].product_cart_price + '</small>' +
+                    '<br>' +
+                    '<a href="">' +
+                    '<i class="fa-solid fa-trash" style="font-size:25px;color:red;' +
+                    'float:right;margin-top: 10px;" onclick="RemoveFromCart(' + i + ')">' +
+                    '</i>' +
+                    '</a>' +
+                    '</div>' +
+                    '</div>' +
+                    '</td>' +
+                    '<td>' + 
+                    '<input type="number" value="1">' +
+                    '</td>' +
+                    '<td>$55.00</td>' +
+                    '</tr>';
+            }
+
+            document.getElementById("grid").innerHTML = grid;
+            var total_cart = 0;
+            for (var i in cart) {
+                total_cart += cart[i].product_cart_price;
+
+            }
+            document.getElementById("total_cart").innerHTML = "PKR " + total_cart;
+        }
+
+        var cart = Array();
+        function RemoveFromCart(index) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+            if (cart != null) {
+                cart.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                var cart_count = cart.length;
+                document.getElementById("cart_count").innerText = cart_count;
+                FillCartPage();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

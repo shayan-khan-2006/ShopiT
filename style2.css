@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f5f8ff;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.title
+{
+    margin-top: 25px;
+}
+
+.addtocart-btn
+{
+    color: #000;
+    font-weight: bold;
+    float: right;
+    border: 2px solid #ccc;
+    border-radius: 13px;
+    padding: 4px;
+}
+
+#search-container 
+{
+    margin: 1em 0;
+    float: right;
+    width: 300px;
+}
+
+#search-container input
+{
+    background-color: transparent;
+    border-bottom: 2px solid #555;
+    padding: 1em 0.3em;
+}
+
+#search-container input::placeholder
+{
+    color: #555;
+}
+
+#search-container input:focus 
+{
+    border-bottom-color: #f5939e;
+}
+
+#search-container button 
+{
+    padding: 1em 1.5em;
+    margin-left: 1em;
+    background-color: #f5939e;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+.button-value 
+{
+    border: 2px solid #555;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #f5939e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.category-up-text
+{
+    font-size: 20px;
+    color: #555454;
+    margin-top: -35px;
+    margin-bottom: 35px;
+}
+
+.active 
+{
+    background: linear-gradient(315deg, #a5ecf8 50%, #ebaeb5 50%);;
+    color: #000;
+}
+
+#products 
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 1.5em;
+    padding: 2em 0;
+    margin-top: 50px;
+}
+
+.product-name
+{
+    color: red;
+    margin-bottom: 7px;
+}
+
+.product-price
+{
+    color: blue;
+    margin-bottom: 7px;
+}
+
+.product-category
+{
+    color: #555;
+    margin-bottom: 7px;
+}
+
+.card 
+{
+    background-color: #ffffff;
+    max-width: 18em;
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+
+.not_found
+{
+    color: #555;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container 
+{
+    text-align: center;
+}
+
+img 
+{
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.container h5 
+{
+    font-weight: 500;
+}
+
+.hide 
+{
+    display: none;
+}
+
+@media screen and (max-width: 720px) 
+{
+    img 
+    {
+        max-width: 100%;
+        object-fit: contain;
+        height: 10em;
+    }
+    .card 
+    {
+        max-width: 10em;
+        margin-top: 1em;
+    }
+    #products 
+    {
+        grid-template-columns: auto auto;
+        grid-column-gap: 1em;
+    }
+}

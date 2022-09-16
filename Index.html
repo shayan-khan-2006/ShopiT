@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> &#128151 ShopiT &#128722 &#128722 | Home &#128525 </title>
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS File Link For Pre-Loader-->
+    <link rel="stylesheet" href="style-for-loader.css">
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:
+                wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="Images/iconoftab.png" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <link rel="apple-touch-icon" sizes="76x76" href="Images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body onload="titleMarquee()">
+
+    <script type="text/javascript">
+
+        var titleText = document.title;
+
+        function titleMarquee() {
+
+            titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+            document.title = titleText;
+            setTimeout("titleMarquee()", 450);
+        }
+
+    </script>
+
+    <!-- Scroll To Top Function -->
+    <div class="scrollTop" onclick="scrollToTop()"></div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active1", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+    </script>
+    <!-- Scroll Bar Customization -->
+    <div id="progress_bar"></div>
+    <div id="scrollpath"></div>
+
+    <!-- Chat Function -->
+    <div class="elfsight-app-06e3c89c-3ffc-4334-8b5c-95a5fb0c7c2c"></div>
+
+    <!-- Pre-Loader -->
+    <!-- <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-inner">
+                <img src="Images/trolly.gif" alt="Please Wait (-_-)">
+            </span>
+        </div>
+        <p>Loading<img src="Images/3-dot.gif" alt="Loading...">
+        </p>
+    </div> -->
+
+    <!-- jQuery For Pre-Loader-->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(window).load(function () {
+            $(".preloader").fadeOut("slow");
+            $("#overlayer").fadeOut("slow");
+        })
+    </script> -->
+
+    <!-- navbar starts -->
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="Index.html"><img src="Images/@logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about us.html">About</a></li>
+                        <li><a href="contact us.html">Contact</a></li>
+                        <li><a href="Account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="Images/cart.png" width="30px" height="30px">
+                </a>
+                <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+            <!-- navbar end -->
+
+
+            <!-- bannner starts -->
+            <div class="row">
+                <div class="col-2">
+                    <h1>Give Your Workout <br> A New Style!</h1> <br><br>
+                    <p>Success isn't always about greatness. It's about consistency. Consistent <br>
+                        hard work gains success. Greatness will come.
+                    </p>
+                    <br>
+
+                    <a href="products.html" class="btn"><b>Explore Now</b> &#8594;</a>
+
+                </div>
+                <div class="col-2">
+                    <img src="Images/image1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bannner ends -->
+
+
+
+    <!-- Featured category -->
+
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="Images/category-1.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="Images/category-2.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="Images/category-3.jpg">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- featured products -->
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <a href="Product Details.html"><img src="Images/product-1.jpg"></a>
+                <a href="Product Details.html">
+                    <h4>Red Printed T-Shirt</h4>
+                </a>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-2.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-3.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-5.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+
+        <!-- Latest products -->
+
+        <h2 class="title">Latest Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="Images/product-7.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-9.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-10.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-11.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="Images/product-12.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-3.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-11.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="Images/product-12.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!-- Masonry -->
+    <main style="display: none;">
+        <div class="wrapper">
+            <!-- 1 -->
+            <div class="item" style="height: 170px;">
+                Mens<img src="">
+            </div>
+            <!-- 2 -->
+            <div class="item" style="height: 270px;">
+                Womens<img src="">
+            </div>
+            <!-- 3 -->
+            <div class="item" style="height: 80px;">
+                New<img src="">
+            </div>
+            <!-- 4 -->
+            <div class="item" style="height: 120px;">
+                Paints<img src="">
+            </div>
+            <!-- 5 -->
+            <div class="item" style="height: 210px;">
+                Watches<img src="">
+            </div>
+            <!-- 6 -->
+            <div class="item" style="height: 130px;">
+                Caps<img src="">
+            </div>
+            <!-- 7 -->
+            <div class="item" style="height: 250px;">
+                T-Shirts<img src="Images/Masonry-shirt.jpg">
+            </div>
+            <!-- 8 -->
+            <div class="item" style="height: 70px;">
+                Sale<img src="">
+            </div>
+            <!-- 9 -->
+            <div class="item" style="height: 140px;">
+                Tops<img src="">
+            </div>
+            <!-- 10 -->
+            <div class="item" style="height: 120px;">
+                Kids<img src="">
+            </div>
+            <!-- 11 -->
+            <div class="item" style="height: 190px;">
+                Shoes<img src="">
+            </div>
+            <!-- 12 -->
+            <div class="item" style="height: 330px;">
+                Slippers<img src="">
+            </div>
+        </div>
+    </main>
+
+
+    <h2 class="title">More From Us..</h2>
+    <section class="grid-section">
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-pent.jfif" height="400px">
+            </div>
+            <div class="overlay">
+                <h2>Pents</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-kid.jfif">
+            </div>
+            <div class="overlay">
+                <h2>Kids</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-jellery.jfif" width="100%">
+            </div>
+            <div class="overlay">
+                <h2>3 Lorem ipsum dolor sit.</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/Masonry-shirt.jpg" width="100%">
+            </div>
+            <div class="overlay">
+                <h2>T-Shirts</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-kameez.jfif" height="400px">
+            </div>
+            <div class="overlay">
+                <h2>Kameez</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-cap.jfif" width="100%" height="200px">
+            </div>
+            <div class="overlay">
+                <h2>Caps</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-watch.jfif" width="100%">
+            </div>
+            <div class="overlay">
+                <h2>Watches</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid-img">
+                <img src="Images/masonry-shoes.jfif" width="100%" height="200px">
+            </div>
+            <div class="overlay">
+                <h2>Shoes</h2>
+                <a href="products.html" class="btn-1">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <br><br><br><br>
+
+    <h2 class="title">Discover Us..</h2>
+    <span class="Sphere"></span>
+
+    <!-- Including the TagCloud.js script CDN in the document    -->
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script>
+        const Texts = [
+            'HTML', 'CSS', 'JAVASCRIPT',
+            'SWIFT', 'MONGOOSE', 'REACT',
+            'PYTHON', 'ZAIN',
+            'DJANGO', 'NODEJS', 'MONGODB',
+            'EXPRESS', 'MYSQL', 'JQUERY', 'JAVA'
+        ];
+
+        var tagCloud = TagCloud('.Sphere', Texts, {
+
+            // Sphere radius in px
+            radius: 230,
+
+            // animation speed
+            // slow, normal, fast
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+
+            // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+            direction: 135,
+
+            // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+            keep: true
+
+        });
+
+        // Giving color to each text in sphere
+        var color = '#26d3f1'; //Pink = #FF44cc , Blue = #00FFFF
+        document.querySelector('.Sphere').style.color = color;
+    </script>
+
+
+    <!-- Script JS -->
+    <script src="masonry.js"></script>
+
+    <!-- Offer -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="Images/exclusive.png" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively Available on ShopiT</p>
+                    <br><br>
+                    <h1 class="head1">Smart Band 4</h1>
+                    <br>
+                    <strong style="color: #555; font-size: 18px;">
+                        The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color
+                        full-touch display with adjustable brightness, so everything is clear as
+                        can be.
+                    </strong>
+                    <br>
+                    <a href="" class="btn">Buy Now &#8594;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <ion-icon class="icon" name="person"></ion-icon>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+                        asperiores iure! Voluptatum repellat, fugit hic alias vitae aperiam
+                        molestiae vel omnis dignissimos quaerat voluptatibus.
+                    </p>
+                    <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <img src="Images/user-1.png">
+                    <h3>Sean Parker</h3>
+                </div>
+                <div class="col-3">
+                    <ion-icon class="icon" name="person"></ion-icon>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+                        asperiores iure! Voluptatum repellat, fugit hic alias vitae aperiam
+                        molestiae vel omnis dignissimos quaerat voluptatibus.
+                    </p>
+                    <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <img src="Images/user-2.png">
+                    <h3>Mike Smith</h3>
+                </div>
+                <div class="col-3">
+                    <ion-icon class="icon" name="person"></ion-icon>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+                        asperiores iure! Voluptatum repellat, fugit hic alias vitae aperiam
+                        molestiae vel omnis dignissimos quaerat voluptatibus.
+                    </p>
+                    <div class="rating">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <img src="Images/user-3.png">
+                    <h3>Mabil Joe</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Brands -->
+
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="Images/logo-godrej.png">
+                </div>
+                <div class="col-5">
+                    <img src="Images/logo-oppo.png">
+                </div>
+                <div class="col-5">
+                    <img src="Images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                    <img src="Images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                    <img src="Images/logo-philips.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="Images/play-store.png">
+                        <img src="Images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="Images/logo (2).png">
+                    <p>Our Purpose Is To Make The Pleasure And Benefits Of Sports
+                        Accessible To The Money</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li id="face">Facebook</li>
+                        <li id="twitter">Twitter</li>
+                        <li id="insta">Instagram</li>
+                        <li id="you">Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - ShopiT.com</p>
+        </div>
+    </div>
+
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems")
+
+        menuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <script>
+
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+
+
+        // Update the count down every 1 second
+        var x_ = setInterval(function () {
+
+            // Get today's date and time
+            var countDownDate_ = new Date("aug 8, 2022 10:40:00").getTime();
+            let current = new Date();
+            const day_ = current.getDate();
+            const month_ = monthNames[current.getMonth()];
+            const year_ = current.getFullYear();
+            let cDate = day_ + '-' + month_ + '-' + year_;
+            let cTime = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+            let dateTime = cDate + ' ' + cTime;
+
+
+            // Display the result in the element with id="demo"
+            var counter_div_ = '<div id="countdown">' +
+                '<div class="close-icon"><span id="close" onclick="this.parentNode.parentNode.parentNode.remove();"> &#10006 </span></div>' +
+                '<div class="box">' + dateTime + '</div>';
+
+            document.getElementById("demo_").innerHTML = counter_div_;
+
+        }, 1000);
+
+
+    </script>
+    <!-- <div id="welcomeDiv" style="display:none;" class="count-down">
+        <div class="close-icon"><span id="close" onclick="this.parentNode.parentNode.parentNode.remove();"> &#10006
+        </span></div>
+        <div class="box"> + "dateTime" + </div>
+    </div>
+    
+    <input type="button" name="answer" value="Show Div" onclick="showDiv()" /> -->
+
+    <div class="open-btn" onclick="showDiv(countdown)"> &#10140 </div>
+    <!-- <input type="button" name="answer" value="Show Div" onclick="showDiv()" /> -->
+    <script>
+        function showDiv(countdown) {
+            document.getElementById('countdown').style.display = "block";
+        }
+    </script>
+
+    <div id="demo_"></div>
+
+    <!-- 
+    <script type="text/javascript">
+        function showDiv(toggle) {
+            document.getElementById(toggle).style.display = 'block';
+        }
+    </script>
+
+    <input type="button" name="answer" onclick="showDiv('toggle')">&#10140</input>
+
+    <div id="toggle" style="display:none">Hello</div> -->
+</body>
+
+</html>

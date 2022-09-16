@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopiT | Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style-for-loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:
+    wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="store.js"></script>
+</head>
+<style>
+    /*PRELOADING------------ */
+    body {
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+    }
+
+    #overlayer {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: #fff;
+    }
+
+
+    .preloader p {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        margin-left: -45px;
+        width: 120px;
+        height: 90px;
+        text-align: center;
+        color: #000;
+        font-size: 22px;
+        z-index: 3;
+        display: flex;
+        margin-top: 20px;
+
+    }
+
+    .preloader span img {
+        width: 290px;
+        height: 290px;
+        margin-top: -80px;
+        margin-left: -70px;
+    }
+
+    .preloader p img {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: #555;
+        font-size: 24px;
+        z-index: 3;
+        margin-top: 3px;
+    }
+
+    .loader {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 43%;
+    }
+
+    .loader-inner img {
+        width: 100%;
+    }
+
+    .btn {
+        float: right;
+    }
+</style>
+
+<body>
+    <!-- Scroll To Top Function -->
+    <div class="scrollTop" onclick="scrollToTop()"></div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active1", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+    </script>
+    <!-- Scroll Bar Customization -->
+    <div id="progress_bar"></div>
+    <div id="scrollpath"></div>
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <!-- Chat Function -->
+    <div class="elfsight-app-06e3c89c-3ffc-4334-8b5c-95a5fb0c7c2c"></div>
+
+    <!-- Pre-Loader -->
+    <!-- <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-inner">
+                <img src="Images/trolly.gif" alt="Please Wait (-_-)">
+            </span>
+        </div>
+        <p>Loading<img src="Images/3-dot.gif" alt="Loading...">
+        </p>
+    </div> -->
+
+    <!-- jQuery For Pre-Loader-->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(window).load(function () {
+            $(".preloader").fadeOut("slow");
+            $("#overlayer").fadeOut("slow");
+        })
+    </script> -->
+
+    <!-- navbar starts -->
+
+    <div class="container1">
+        <div class="navbar">
+            <div class="logo">
+                <a href="Index.html"><img src="Images/@logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html">
+                <img src="Images/cart.png" width="30px" height="30px" id="cart_count">
+            </a>
+            <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    <div class="small-container">
+
+
+        <!-- <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option>Default Sorting</option>
+                <option>Sort by Price</option>
+                <option>Sort by Popularity</option>
+                <option>Sort by Rating</option>
+                <option>Sort by Sale</option>
+            </select>
+        </div>
+
+
+        <div id="products"></div> -->
+
+        <div class="title">
+            <h2>All Products</h2>
+        </div>
+
+        <div class="wrapper">
+            <div id="search-container">
+                <input type="search" id="search-input" placeholder="Search Product Here..." />
+                <button id="search">Search</button>
+            </div>
+            <div class="category-up-text">
+                <span style="color: #000; font-weight: bold;">C</span>hoose your favorite category:
+            </div>
+            <div id="buttons">
+                <button class="button-value" onclick="filterProduct('all')">All</button>
+                <button class="button-value" onclick="filterProduct('Mens')">
+                    Mens
+                </button>
+                <button class="button-value" onclick="filterProduct('Womens')">
+                    Womens
+                </button>
+                <button class="button-value" onclick="filterProduct('Kids')">
+                    Kids
+                </button>
+                <button class="button-value" onclick="filterProduct('Watch')">
+                    Watch
+                </button>
+            </div>
+            <!-- <div id="products"></div> -->
+            <div id="grid"></div>
+        </div>
+
+        <!-- <div class="row">
+        <div class="col-4">
+            <a class="shop-item-image" href="Product Details.html"><img src="Images/product-1.jpg"></a>
+            <a class="shop-item-title" href="Product Details.html"><h4>Red Printed T-Shirt</h4></a>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p class="shop-item-price">$50.00</p>
+        </div>
+        <div class="col-4">
+            <a href="Product Details.html"><img src="Images/blackts1.jpg"></a>
+            <a href="Product Details.html"><h4>Black T-Shirt</h4></a>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-3.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-4.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img src="Images/product-5.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-6.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-7.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-8.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img src="Images/product-9.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-10.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-11.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-half-outline"></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="Images/product-12.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <ion-icon name='star'></ion-icon>
+                <ion-icon name='star'></ion-icon>
+                <ion-icon name='star'></ion-icon>
+                <ion-icon name='star'></ion-icon>
+                <ion-icon name='star-outline'></ion-icon>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div>
+</div> -->
+
+
+
+        <!-- page btn -->
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+
+
+        <!-- footer -->
+
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="Images/play-store.png">
+                            <img src="Images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="Images/@logo.png">
+                        <p>Our Purpose Is To Make The Pleasure And Benefits Of Sports
+                            Accessible To The Money</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2022 - ShopiT.com</p>
+            </div>
+        </div>
+
+
+        <!-- JS for toggle menu -->
+        <script>
+            var menuItems = document.getElementById("menuItems")
+
+            menuItems.style.maxHeight = "0px";
+
+            function menutoggle() {
+                if (menuItems.style.maxHeight == "0px") {
+                    menuItems.style.maxHeight = "200px";
+                }
+                else {
+                    menuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+        <!-- <script src="script.js"></script> -->
+
+        <!-- <script>
+            var grid = '';
+            for (var i in products) {
+                grid += '<div class="col-md-4">' +
+                    '<div class="card mb-4 product-wap rounded-0">' +
+                    '<div class="card rounded-0">' +
+                    '<img class="card-img rounded-0 img-fluid shop-item-image" src="' + products[i].image + '">' +
+                    '<div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">' +
+                    '<ul class="list-unstyled">' +
+                    '<li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>' +
+                    '<li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>' +
+                    '<li><a class="btn btn-success text-white mt-2" href="" onclick="AddToCart(' + i + ')"><i class="fas fa-cart-plus shop-item-button"></i></a></li>' +
+                    ' </ul>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="card-body">' +
+                    '<a href="shop-single.html" class="h3 text-decoration-none shop-item-title">' + products[i].product_name + '</a>' +
+                    '<ul class="w-100 list-unstyled d-flex justify-content-between mb-0">' +
+                    '<li>M/L/X/XL</li>' +
+                    '<li class="pt-2">' +
+                    '<span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>' +
+                    '<span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>' +
+                    '<span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>' +
+                    '<span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>' +
+                    '<span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>' +
+                    '</li>' +
+                    '</ul>' +
+                    '<ul class="list-unstyled d-flex justify-content-center mb-1">' +
+                    '<li>' +
+                    ' <i class="text-warning fa fa-star"></i>' +
+                    '<i class="text-warning fa fa-star"></i>' +
+                    '<i class="text-warning fa fa-star"></i>' +
+                    '<i class="text-muted fa fa-star"></i>' +
+                    '<i class="text-muted fa fa-star"></i>' +
+                    '</li>' +
+                    '</ul>' +
+                    '<p class="text-center mb-0 shop-item-price">PKR ' + products[i].price + '</p>' +
+                    ' </div>' +
+                    '</div>' +
+                    '</div>';
+            }
+
+            document.getElementById("grid").innerHTML = grid;
+        </script> -->
+
+</body>
+<script src="product.js"></script>
+<script>
+    var products_grid = "";
+    for (var i in products) {
+        products_grid +=
+            // '<div class="colmy">' +
+            // '<div class="card">' +
+            // '<i class="bi bi-heart-fill"></i>' +
+            // '<img src="' + products[i].image + '" class="card-img-top" alt="...">' +
+            // '<div class="card-body text-center">' +
+            // '<h5 class="card-title"><a><button onclick ="viewProduct(' + i + ')">' + products[i].product_name + '</a></h5>' +
+            // '<h4 class="card-text text-danger">PKR ' + products[i].price + '</h4>' +
+            // '<button type="button" class="btn btn-outline-primary" id="addtocart-btn">Add to cart</button>' +
+            // '</div>' +
+            // '</div>' +
+            // '</div>';
+            '<div class="colmy">' +
+            '<a class="shop-item-image" href="Product Details.html">' +
+            '<img src="' + products[i].image + '">' +
+            '</a>' + '<br>' +
+            '<a class="productname" href="Product Details.html">' +
+            '<h4><button onclick ="viewProduct(' + i + ')">' + products[i].product_name + '</a></h5></h4>' +
+            ' </a>' + '<br>' +
+            '<div class="rating">' +
+            '<ion-icon name="star"></ion-icon>' +
+            '<ion-icon name="star"></ion-icon>' +
+            '<ion-icon name="star"></ion-icon>' +
+            '<ion-icon name="star"></ion-icon>' +
+            '<ion-icon name="star-outline"></ion-icon>' + '<br>' +
+            '</div>' + '<br>' +
+            '<p class="product-price">PKR ' + products[i].price + '</p>' +
+            '<button type="button" class="btn btn-outline-primary" id="addtocart-btn" onclick="AddToCart(' + i + ')">Add to cart</button>' +
+            '</div>';
+    }
+    document.getElementById("grid").innerHTML = products_grid;
+
+    // function viewProduct(Index) {
+    //     localStorage.setItem("products_id", Index);
+    //     window.open("Product Details.html", "_self");
+    // }
+</script>
+<script>
+    var cart = Array();
+
+    function AddToCart(index) {
+        var new_product = products[index];
+        cart = JSON.parse(localStorage.getItem("cart"));
+
+        if (cart == null) {
+            new_product.qty = 1;
+            new_product.product_cart_price = new_product.qty * new_product.price;
+            cart = [new_product];
+        }
+        else {
+            var foundInCart = false;
+            var i;
+            for (i in cart) {
+                if (cart[i].product_name == new_product.product_name) {
+                    foundInCart = true;
+                    break;
+                }
+            }
+            if (foundInCart == false) {
+                new_product.qty = 1;
+                new_product.product_cart_price = new_product.qty * new_product.price;
+                cart.push(new_product);
+            }
+            else {
+                cart[i].qty++;
+                cart[i].product_cart_price = cart[i].qty * cart[i].price;
+                // console.log(cart[i].qty);
+            }
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        var cart_count = cart.length;
+        document.getElementById("cart_count").innerText = cart_count;
+
+
+        // console.log("Added to cart\n");
+        // for (i in cart) {
+        //   console.log(cart[i].product_name);
+        //   console.log(cart[i].price);
+        //   console.log(cart[i].image);
+        //   console.log(cart[i].qty);
+        //   console.log(cart[i].product_cart_price);
+        //   console.log("END\n\n");
+        // }
+    }
+</script>
+
+<!-- '<div class="col-4">' +
+            '<a class="shop-item-image" href="Product Details.html">'+
+                '<img src="' + products[i].image + '">'+
+            '</a>'+
+            '<a class="shop-item-title" href="Product Details.html">'+
+                '<h4><a><button onclick ="viewProduct(' + i + ')">' + products[i].product_name + '</a></h5></h4>'+
+           ' </a>'+
+            '<div class="rating">'+
+                '<ion-icon name="star"></ion-icon>'+
+                '<ion-icon name="star"></ion-icon>'+
+                '<ion-icon name="star"></ion-icon>'+
+                '<ion-icon name="star"></ion-icon>'+
+                '<ion-icon name="star-outline"></ion-icon>'+
+            '</div>'+
+            '<p class="shop-item-price">PKR ' + products[i].price + '</p>'+
+            '<button type="button" class="btn btn-outline-primary" id="addtocart-btn">Add to cart</button>'+
+        '</div>'-->
+
+</html>

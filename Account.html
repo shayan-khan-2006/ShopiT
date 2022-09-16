@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopiT | Account</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS File Link For Pre-Loader-->
+    <link rel="stylesheet" href="style-for-loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:
+            wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Scroll To Top Function -->
+    <div class="scrollTop" onclick="scrollToTop()"></div>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active1", window.scrollY > 500)
+        })
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+    </script>
+    <!-- Scroll Bar Customization -->
+    <div id="progress_bar"></div>
+    <div id="scrollpath"></div>
+
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <!-- Chat Function -->
+    <div class="elfsight-app-06e3c89c-3ffc-4334-8b5c-95a5fb0c7c2c"></div>
+
+    <!-- Pre-Loader -->
+    <div id="overlayer"></div>
+    <div class="preloader">
+        <div class="loader">
+            <span class="loader-inner">
+                <!-- <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+                <lord-icon src="https://cdn.lordicon.com/lpddubrl.json" trigger="load" style="width:150px;height:150px">
+                </lord-icon> -->
+                <img src="Images/trolly.gif" alt="Please Wait (-_-)">
+            </span>
+        </div>
+        <p>Loading<img src="Images/3-dot.gif" alt="Loading...">
+        </p>
+    </div>
+
+    <!-- jQuery For Pre-Loader-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script>
+        $(window).load(function () {
+            $(".preloader").delay(5000).fadeOut("slow");
+            $("#overlayer").delay(5000).fadeOut("slow");
+        })
+    </script>
+
+    <!-- navbar starts -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="Index.html"><img src="Images/logo (2).png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="menuItems">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contact us.html">Contact</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="Images/cart.png" width="30px" height="30px"></a>
+            <img src="Images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+
+    <!-- Account page -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="Images/image1.png" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+
+                        <form id="loginform">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+
+                        <form id="regform">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="Images/play-store.png">
+                        <img src="Images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="Images/logo (2).png">
+                    <p>Our Purpose Is To Make The Pleasure And Benefits Of Sports
+                        Accessible To The Money</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - ShopiT.com</p>
+        </div>
+    </div>
+
+
+    <!-- JS for toggle menu -->
+    <script>
+        var menuItems = document.getElementById("menuItems")
+
+        menuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuItems.style.maxHeight == "0px") {
+                menuItems.style.maxHeight = "200px";
+            }
+            else {
+                menuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- js for toggle form -->
+
+    <script>
+        var loginform = document.getElementById("loginform")
+        var regform = document.getElementById("regform")
+        var indicator = document.getElementById("indicator")
+
+        function register() {
+            regform.style.transform = "translateX(0px)";
+            loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            regform.style.transform = "translateX(300px)";
+            loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
